@@ -1,0 +1,7 @@
+# 后端建表脚本含管理员邮箱，不随公开站点发布
+supabase/
+
+# 系统与临时文件
+.DS_Store
+Thumbs.db
+*.log

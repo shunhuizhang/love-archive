@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>双重曝光 · 我们的恋爱存档</title>
+<meta name="description" content="小辉和小唤的私人小志：在一起的天数、一起做过的事、一起去过的地方，还有会动的照片。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F1ECDF'/%3E%3Ccircle cx='13' cy='16' r='9' fill='%23FF4D7E'/%3E%3Ccircle cx='20' cy='16' r='9' fill='%2327357E' fill-opacity='.75'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="#top" aria-label="回到页首">
+      <strong>双重曝光</strong>
+      <span>DOUBLE EXPOSURE · ISSUE 01</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#moments"><em>01</em>共同时刻</a>
+      <a href="#places"><em>02</em>去过的地方</a>
+      <a href="#photos"><em>03</em>照片存档</a>
+    </nav>
+    <div class="head-tools">
+      <p class="day-chip"><span class="day-chip__dot" aria-hidden="true"></span>DAY <strong data-days>—</strong></p>
+      <button class="music-btn" type="button" id="musicBtn" aria-pressed="false" aria-label="播放背景音乐《我们的明天》" title="播放《我们的明天》">
+        <span class="music-btn__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="music-btn__label" id="musicLabel">播放</span>
+      </button>
+      <button class="auth-btn" type="button" id="authBtn">登录 / 留言</button>
+      <span class="user-chip" id="userChip" hidden>
+        <b data-user>—</b>
+        <i data-role>GUEST</i>
+      </span>
+      <button class="auth-btn auth-btn--ghost" type="button" id="logoutBtn" hidden>退出</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="kicker">私人小志 · <span data-city>杭州</span> · 不定期更新</p>
+        <h1 class="hero-title">
+          <span class="hero-title__line hero-title__line--small">我们在一起的</span>
+          <span class="hero-title__line hero-title__line--day">
+            <span class="hero-title__pre">第</span>
+            <em data-days>194</em>
+            <span class="hero-title__suf">天</span>
+          </span>
+          <span class="hero-title__line hero-title__line--tail">还在同一张纸上。</span>
+        </h1>
+        <p class="hero__intro" data-intro>
+          这是小辉和小唤的私人小志。没有算法推荐，也没有访客统计，只有一起做过的事、一起去过的地方，和一卷还在继续的照片。
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn" href="#moments">
+            <span>翻开内页</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </a>
+          <p class="hero__hint">往下翻，里面都是我们。</p>
+        </div>
+
+        <dl class="stats" aria-label="存档统计">
+          <div class="stat">
+            <dt>共同事件</dt>
+            <dd><strong data-count="moments">—</strong><span>件</span></dd>
+          </div>
+          <div class="stat">
+            <dt>抵达地点</dt>
+            <dd><strong data-count="places">—</strong><span>处</span></dd>
+          </div>
+          <div class="stat">
+            <dt>存档照片</dt>
+            <dd><strong data-count="photos">—</strong><span>张</span></dd>
+          </div>
+          <div class="stat">
+            <dt>下次出发</dt>
+            <dd><strong>∞</strong><span>次</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero__cover">
+        <figure class="cover">
+          <div class="cover__main">
+            <div class="media" data-media="heroMain">
+              <img data-photo="heroMain" alt="黄昏时分，两个人在海边散步的背影">
+              <div class="media__dots" aria-hidden="true"></div>
+              <div class="media__missing" aria-hidden="true"><span>PHOTO / 还没显影</span></div>
+            </div>
+            <figcaption class="cover__cap">
+              <span>COVER / 封面</span>
+              <span>2026 · 夏</span>
+            </figcaption>
+          </div>
+          <p class="cover__seal" aria-hidden="true">仅限两人<br>PRIVATE<br>ARCHIVE</p>
+          <figure class="cover__mini">
+            <div class="media" data-media="heroMini">
+              <img data-photo="heroMini" alt="两杯咖啡和一张手写便签">
+              <div class="media__dots" aria-hidden="true"></div>
+              <div class="media__missing" aria-hidden="true"><span>FRAME / 02</span></div>
+            </div>
+            <figcaption>某个普通的上午</figcaption>
+          </figure>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="我们去过的地方">
+    <div class="ticker__track" id="tickerTrack"></div>
+  </div>
+
+  <section class="section" id="moments">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="section__label"><span>01</span>MOMENTS / 共同时刻</p>
+        <h2 class="section__title">一起做过的事<span class="section__en">THE THINGS WE DID</span></h2>
+        <p class="section__note">从第一次见面开始，按时间排列。有些事很小，小到不记下来就会忘。</p>
+      </header>
+
+      <div class="filters" id="yearFilters" role="group" aria-label="按年份筛选共同事件"></div>
+      <ol class="log" id="log"></ol>
+      <p class="log__empty" id="logEmpty" hidden>这一年还没有存档。</p>
+    </div>
+  </section>
+
+  <section class="section section--places" id="places">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="section__label"><span>02</span>PLACES / 去过的地方</p>
+        <h2 class="section__title">一起抵达的地方<span class="section__en">PLACES WE'VE BEEN</span></h2>
+        <p class="section__note">每一张明信片背后，都有一件只有我们记得的小事。</p>
+      </header>
+
+      <div class="postcards" id="postcards"></div>
+
+      <div class="wishlist reveal">
+        <p class="wishlist__label">还没去，<br>但已经说好了</p>
+        <ul id="wishlist"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="photos">
+    <div class="wrap">
+      <header class="section__head reveal">
+        <p class="section__label"><span>03</span>ARCHIVE / 照片存档</p>
+        <h2 class="section__title">同一卷底片<span class="section__en">ONE ROLL, TWO PEOPLE</span></h2>
+        <p class="section__note">点开任意一张，可以放大看。带「动图」标记的，会自己动。</p>
+      </header>
+
+      <div class="filters" id="photoFilters" role="group" aria-label="按类型筛选照片"></div>
+
+      <div class="admin-tools" id="adminTools" hidden>
+        <button class="btn btn--small" type="button" id="uploadBtn">
+          <span>上传照片</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v13M5 12l7-7 7 7"/></svg>
+        </button>
+        <button class="ghost-btn" type="button" id="importBtn" hidden>导入示例数据</button>
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+      <p class="gallery__empty" id="galleryEmpty" hidden>这里还没有照片。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="wrap">
+    <p class="kicker kicker--light">ISSUE 01 · TO BE CONTINUED</p>
+    <h2>这卷，<br><em>还没拍完。</em></h2>
+    <p class="colophon__sub">第 <strong data-days>194</strong> 天。下一帧还在路上。</p>
+    <div class="colophon__grid">
+      <p><span>记录者</span><b data-names>小辉 &amp; 小唤</b></p>
+      <p><span>起始日</span><b data-start-label>2026.04.25</b></p>
+      <p><span>存放地</span><b data-city>杭州</b></p>
+      <p><span>阅览权限</span><b>游客可看 · 登录留言</b></p>
+    </div>
+    <div class="colophon__foot">
+      <p>© <span data-year>2026</span> 双重曝光 · 两个人的私人小志</p>
+      <a href="#top">回到页首 ↑</a>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-labelledby="lbCaption">
+  <div class="lightbox__panel">
+    <div class="lightbox__bar">
+      <span class="lightbox__frame" id="lbFrame">FRAME 01 / 15</span>
+      <div class="lightbox__bar-actions">
+        <button class="ghost-btn lightbox__del" type="button" id="lbDelete" hidden>删除</button>
+        <button class="icon-btn" type="button" id="lbClose" aria-label="关闭预览">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="lightbox__stage">
+      <button class="icon-btn lightbox__nav lightbox__nav--prev" type="button" id="lbPrev" aria-label="上一张">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <img id="lbImage" alt="">
+      <button class="icon-btn lightbox__nav lightbox__nav--next" type="button" id="lbNext" aria-label="下一张">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <div class="lightbox__cap">
+      <p id="lbCaption"></p>
+      <p id="lbMeta" class="lightbox__meta"></p>
+      <p class="lightbox__badge" id="lbBadge" hidden>动图 / GIF</p>
+    </div>
+
+    <section class="lb-comments" aria-label="照片留言">
+      <header class="lb-comments__head">
+        <span>COMMENTS / 留言</span>
+        <span id="commentCount"></span>
+      </header>
+      <ul class="comments" id="commentsList"></ul>
+      <p class="comments__empty" id="commentsEmpty">还没有留言，说句好话吧。</p>
+
+      <form class="comment-form" id="commentForm" hidden>
+        <label class="sr-only" for="commentInput">写留言</label>
+        <textarea id="commentInput" maxlength="300" rows="3" placeholder="写一句只属于你们的话…"></textarea>
+        <div class="comment-form__foot">
+          <span id="commentHint">登录后可以留言</span>
+          <button type="submit" id="commentSubmit">发送留言</button>
+        </div>
+      </form>
+
+      <button class="comment-login" type="button" id="commentLogin">登录后留言 →</button>
+    </section>
+  </div>
+</dialog>
+
+<dialog class="sheet" id="loginDialog" aria-labelledby="loginTitle">
+  <div class="sheet__panel">
+    <div class="sheet__bar">
+      <span class="sheet__label">MEMBER ONLY / 登录</span>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="关闭登录">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <h2 class="sheet__title" id="loginTitle">进来看看</h2>
+    <p class="sheet__note">管理员登录后可以上传和删除照片；游客登录后可以留言。</p>
+
+    <div class="auth-tabs" role="tablist" aria-label="登录方式">
+      <button class="auth-tab is-on" type="button" role="tab" data-auth-tab="password" aria-selected="true">账号密码</button>
+      <button class="auth-tab" type="button" role="tab" data-auth-tab="email" aria-selected="false">邮箱登录</button>
+    </div>
+
+    <form class="auth-pane" id="passwordForm" data-auth-pane="password">
+      <label class="field">
+        <span>账号</span>
+        <input type="text" id="loginUsername" name="username" autocomplete="username" placeholder="输入账号" required>
+      </label>
+      <label class="field">
+        <span>密码</span>
+        <input type="password" id="loginPassword" name="password" autocomplete="current-password" placeholder="输入密码" required>
+      </label>
+      <p class="sheet__msg" id="passwordMsg" role="status"></p>
+      <div class="sheet__actions">
+        <button class="btn btn--full" type="submit" id="passwordSubmit">密码登录</button>
+      </div>
+    </form>
+
+    <form class="auth-pane" id="emailForm" data-auth-pane="email" hidden>
+      <label class="field">
+        <span>邮箱</span>
+        <input type="email" id="loginEmail" name="email" autocomplete="email" placeholder="you@example.com" required>
+      </label>
+      <p class="sheet__msg" id="authMsg" role="status"></p>
+      <div class="sheet__actions">
+        <button class="btn btn--full" type="submit" id="emailSubmit">发送登录链接</button>
+      </div>
+      <p class="sheet__fineprint">不用输验证码：邮件里点「Sign in」就会自动回到这里登录。</p>
+    </form>
+  </div>
+</dialog>
+
+<dialog class="sheet" id="uploadDialog" aria-labelledby="uploadTitle">
+  <form class="sheet__panel" id="uploadForm">
+    <div class="sheet__bar">
+      <span class="sheet__label">ADMIN ONLY / 上传</span>
+      <button class="icon-btn" type="button" data-close-dialog aria-label="关闭上传">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <h2 class="sheet__title" id="uploadTitle">放进这卷底片</h2>
+    <p class="sheet__note">支持 JPG / PNG / WebP / GIF。超过 1.5MB 的静态图会自动压缩，GIF 原样保留以保住动效。</p>
+
+    <label class="field">
+      <span>照片文件</span>
+      <input type="file" id="uploadFile" accept="image/jpeg,image/png,image/webp,image/gif" required>
+    </label>
+
+    <label class="field">
+      <span>一句话说明</span>
+      <input type="text" id="uploadCaption" maxlength="80" placeholder="比如：雨天车窗" required>
+    </label>
+
+    <div class="field-row">
+      <label class="field">
+        <span>月份</span>
+        <input type="month" id="uploadDate" required>
+      </label>
+      <label class="field">
+        <span>地点</span>
+        <input type="text" id="uploadPlace" maxlength="30" placeholder="杭州">
+      </label>
+    </div>
+
+    <label class="field">
+      <span>分类</span>
+      <select id="uploadTag">
+        <option value="日常">日常</option>
+        <option value="旅行">旅行</option>
+      </select>
+    </label>
+
+    <p class="sheet__msg" id="uploadMsg" role="status"></p>
+    <button class="btn btn--full" type="submit" id="uploadSubmit">上传并保存</button>
+  </form>
+</dialog>
+
+<audio id="bgm" src="music/我们的明天.mp3" loop preload="metadata"></audio>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
