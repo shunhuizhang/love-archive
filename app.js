@@ -998,7 +998,7 @@
         showCloudNote("网络不太顺，先显示上次缓存的照片。");
         probeFirstPhoto();
       } else {
-        showCloudNote("照片没加载出来：这台设备连不上 Supabase，点「重新加载」再试一次。");
+        showCloudNote("照片没加载出来，现在显示的是示例照片。点「重新加载」再试一次。");
       }
       return;
     }
