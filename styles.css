@@ -828,16 +828,18 @@ a { color: inherit; }
 
 .postcard__row {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 12px;
+  gap: 4px 12px;
 }
 
 .postcard__city {
   margin: 0;
-  font-size: clamp(22px, 2.2vw, 28px);
+  font-size: clamp(20px, 1.9vw, 26px);
   font-weight: 800;
   letter-spacing: -0.03em;
+  word-break: keep-all;
   line-height: 1.1;
 }
 
@@ -845,6 +847,7 @@ a { color: inherit; }
   font: 9px/1 var(--mono);
   letter-spacing: 0.06em;
   color: var(--muted);
+  margin-left: auto;
 }
 
 .postcard__note {

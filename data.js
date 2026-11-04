@@ -191,76 +191,34 @@
 
     places: [
       {
-        city: "杭州",
-        date: "2022 — 至今",
-        note: "一切开始的地方。住在这里，也在这里重新开始。",
-        photo: P(
-          "West Lake in Hangzhou at dusk, calm water, distant bridge and willow trees, soft mist, 35mm film",
-          "landscape_4_3"
-        ),
+        city: "云南文山丘北欢乐世界",
+        date: "2026.08",
+        note: "飞椅转起来的时候，整座山都在脚下转。",
+        photo: "assets/place-01.jpg",
       },
       {
-        city: "厦门",
-        date: "2023.03",
-        note: "第一次看海。海是灰色的，但记忆是暖的。",
-        photo: P(
-          "grey overcast sea at Xiamen beach, wet sand, muted blue tones, 35mm film grain, moody",
-          "landscape_4_3"
-        ),
+        city: "云南普者黑景区",
+        date: "2026.08",
+        note: "荷花开满了一整片水，栈道一直走到山脚下。",
+        photo: "assets/place-02.jpg",
       },
       {
-        city: "上海",
-        date: "2024.01",
-        note: "在人潮里跨年，冻得说不出话，还是一直笑。",
-        photo: P(
-          "New Year crowd at the Bund in Shanghai at night, warm city lights, confetti, film photography",
-          "landscape_4_3"
-        ),
+        city: "长沙古开福寺",
+        date: "2026.11",
+        note: "在红墙下举着「旺」字，认真求了个好彩头。",
+        photo: "assets/place-03.jpg",
       },
       {
-        city: "大理",
-        date: "2024.10",
-        note: "环洱海骑了两天。风很大，话很少，刚刚好。",
-        photo: P(
-          "two bicycles leaning by Erhai lake in Dali, mountains in the background, golden hour, film photography",
-          "landscape_4_3"
-        ),
+        city: "长沙杜甫江阁",
+        date: "2026.11",
+        note: "夜里灯一亮，江阁像浮在江面上。",
+        photo: "assets/place-04.jpg",
       },
       {
-        city: "川西",
-        date: "2025.02",
-        note: "零下十度的雪山，和一条被分成两半的围巾。",
-        photo: P(
-          "blue hour snowy mountain ridge in western Sichuan, deep blue shadows, tiny figures in the distance, cinematic film",
-          "landscape_4_3"
-        ),
-      },
-      {
-        city: "莫干山",
-        date: "2025.06",
-        note: "帐篷搭歪了，星星没歪。说好了每年都来。",
-        photo: P(
-          "campfire and tent under a starry night sky in the mountains, warm glow, long exposure, film grain",
-          "landscape_4_3"
-        ),
-      },
-      {
-        city: "南京",
-        date: "2026.04",
-        note: "梧桐絮飞了一脸，你笑得比春天还大声。",
-        photo: P(
-          "Nanjing plane tree lined street in spring, fresh green leaves, warm sunlight, film photography",
-          "landscape_4_3"
-        ),
-      },
-      {
-        city: "三亚",
-        date: "2026.07",
-        note: "四点半起床，没等到的日出，和已经约好的下一次。",
-        photo: P(
-          "sunrise over the sea in Sanya, thick clouds, two silhouettes sitting on the sand, pastel sky, film photo",
-          "landscape_4_3"
-        ),
+        city: "长沙湘江",
+        date: "2026.11",
+        note: "江风很大，你站在栏杆边看了很久。",
+        photo: "assets/place-05.jpg",
       },
     ],
 
