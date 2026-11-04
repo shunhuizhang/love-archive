@@ -154,6 +154,11 @@
         <p class="section__note">点开任意一张，可以放大看。带「动图」标记的，会自己动。</p>
       </header>
 
+      <p class="cloud-note" id="cloudNote" role="status" hidden>
+        <span id="cloudNoteText">照片没有加载出来。</span>
+        <button class="cloud-note__retry" type="button" id="cloudRetry">重新加载</button>
+      </p>
+
       <div class="filters" id="photoFilters" role="group" aria-label="按类型筛选照片"></div>
 
       <div class="admin-tools" id="adminTools" hidden>
@@ -328,7 +333,7 @@
 
 <audio id="bgm" src="music/我们的明天.mp3" loop preload="metadata"></audio>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="vendor/supabase.js"></script>
 <script src="config.js"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>

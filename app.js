@@ -920,19 +920,89 @@
 
   /* ---------------- 后端数据 ---------------- */
 
-  async function loadRemotePhotos() {
-    const { data, error } = await state.sb
-      .from("photos")
-      .select("id, src, caption, date, place, tag, motion, sort_order, created_at")
-      .order("sort_order", { ascending: true })
-      .order("created_at", { ascending: true });
+  const PHOTO_CACHE_KEY = "love.archive.photos.v1";
 
-    if (error) {
-      console.warn("[love-archive] 读取照片失败", error);
+  function withTimeout(promise, ms) {
+    return Promise.race([
+      promise,
+      new Promise((_, reject) => setTimeout(() => reject(new Error("TIMEOUT")), ms)),
+    ]);
+  }
+
+  function readPhotoCache() {
+    try {
+      const list = JSON.parse(localStorage.getItem(PHOTO_CACHE_KEY) || "null");
+      return Array.isArray(list) && list.length ? list : null;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function writePhotoCache(rows) {
+    try {
+      localStorage.setItem(PHOTO_CACHE_KEY, JSON.stringify(rows));
+    } catch (err) {
+      /* 隐私模式或空间不足时忽略 */
+    }
+  }
+
+  function showCloudNote(text) {
+    const note = $("#cloudNote");
+    const label = $("#cloudNoteText");
+    if (!note || !label) return;
+    label.textContent = text;
+    note.hidden = false;
+  }
+
+  function hideCloudNote() {
+    const note = $("#cloudNote");
+    if (note) note.hidden = true;
+  }
+
+  // 只探测第一张：列表能读到但图片打不开，多半是网络把存储域名挡住了
+  function probeFirstPhoto() {
+    const first = state.photos.find((p) => p.src);
+    if (!first) return;
+    const probe = new Image();
+    probe.onerror = () => {
+      showCloudNote("照片信息读到了，但图片文件打不开，可能是当前网络访问不了图床。");
+    };
+    probe.src = first.src;
+  }
+
+  async function loadRemotePhotos() {
+    const retry = $("#cloudRetry");
+    if (retry) retry.disabled = true;
+    hideCloudNote();
+
+    let rows;
+    try {
+      const query = state.sb
+        .from("photos")
+        .select("id, src, caption, date, place, tag, motion, sort_order, created_at")
+        .order("sort_order", { ascending: true })
+        .order("created_at", { ascending: true });
+      const { data, error } = await withTimeout(query, 12000);
+      if (error) throw error;
+      rows = data || [];
+    } catch (err) {
+      console.warn("[love-archive] 读取照片失败", err);
+      if (retry) retry.disabled = false;
+
+      const cached = readPhotoCache();
+      if (cached) {
+        state.photos = normalizeMotion(cached);
+        renderGallery();
+        updateCounts();
+        renderAuth();
+        showCloudNote("网络不太顺，先显示上次缓存的照片。");
+        probeFirstPhoto();
+      } else {
+        showCloudNote("照片没加载出来：这台设备连不上 Supabase，点「重新加载」再试一次。");
+      }
       return;
     }
 
-    const rows = data || [];
     state.remoteCount = rows.length;
 
     if (rows.length) {
@@ -946,6 +1016,7 @@
         motion: !!r.motion || /\.gif(?:[?#].*)?$/i.test(r.src || ""),
         sort_order: r.sort_order || 0,
       }));
+      writePhotoCache(state.photos);
     } else {
       state.photos = normalizeMotion(samplePhotos());
     }
@@ -956,6 +1027,8 @@
     renderGallery();
     updateCounts();
     renderAuth();
+    probeFirstPhoto();
+    if (retry) retry.disabled = false;
   }
 
   async function importSamples() {
@@ -991,6 +1064,7 @@
     if (!SB_URL || !SB_KEY || !window.supabase) {
       state.online = false;
       renderAuth();
+      showCloudNote("登录组件没加载出来，现在看到的是示例照片。点「重新加载」再试一次。");
       return;
     }
 
@@ -1013,7 +1087,20 @@
       console.error("[love-archive] Supabase 初始化失败", err);
       state.online = false;
       renderAuth();
+      showCloudNote("连不上服务器，现在看到的是示例照片。点「重新加载」再试一次。");
     }
+  }
+
+  function setupCloudNote() {
+    const retry = $("#cloudRetry");
+    if (!retry) return;
+    retry.addEventListener("click", async () => {
+      if (!state.sb) {
+        window.location.reload();
+        return;
+      }
+      await loadRemotePhotos();
+    });
   }
 
   /* ---------------- 交互绑定 ---------------- */
@@ -1145,6 +1232,7 @@
   setupLightbox();
   setupAuthUI();
   setupMusic();
+  setupCloudNote();
   setupNavState();
   initBackend();
 
