@@ -26,18 +26,12 @@
 
     hero: {
       heroMain: {
-        src: P(
-          "a couple seen from behind walking along a quiet beach at golden hour, holding hands, warm sunset light, 35mm film photography, soft grain, cinematic, no visible faces, portrait format",
-          "portrait_4_3"
-        ),
-        alt: "黄昏时分，两个人在海边散步的背影",
+        src: "assets/hero-main.jpg",
+        alt: "夜里在杜甫江阁前，小辉和小唤举着一把写着「杜甫江阁」的折扇",
       },
       heroMini: {
-        src: P(
-          "two cups of coffee and a handwritten note on a sunlit cafe table, cozy warm tones, shallow depth of field, 35mm film photography",
-          "square_hd"
-        ),
-        alt: "两杯咖啡和一张手写便签",
+        src: "assets/hero-mini.jpg",
+        alt: "两只戴着戒指的手牵在一起，脚边落着一片黄叶",
       },
     },
 
