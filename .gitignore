@@ -1,8 +1,9 @@
 # 后端建表脚本含管理员邮箱，不随公开站点发布
 supabase/
 
-# 未混淆的源码只保留在本地，站点只发布混淆后的 app.packed.js
+# 未混淆的源码与配置只保留在本地，站点只发布混淆后的 app.packed.js
 tools/app.src.js
+tools/config.src.js
 
 # 构建工具依赖
 node_modules/

@@ -5,12 +5,15 @@ import JavaScriptObfuscator from "javascript-obfuscator";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
+const configFile = path.join(root, "tools", "config.src.js");
 const srcFile = path.join(root, "tools", "app.src.js");
 const outFile = path.join(root, "app.packed.js");
 
-const source = fs.readFileSync(srcFile, "utf8");
+// 配置和业务逻辑一起打包，配置里的字符串会进入混淆器的字符串数组
+const config = fs.readFileSync(configFile, "utf8");
+const app = fs.readFileSync(srcFile, "utf8");
 
-const result = JavaScriptObfuscator.obfuscate(source, {
+const result = JavaScriptObfuscator.obfuscate(config + "\n" + app, {
   compact: true,
   simplify: true,
   identifierNamesGenerator: "hexadecimal",
