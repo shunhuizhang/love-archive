@@ -694,6 +694,8 @@ a { color: inherit; }
 
 .log__item:hover::before { width: 3px; }
 
+.log__item--no-thumb { grid-template-columns: 48px 116px minmax(0, 1fr); }
+
 .log__no {
   padding-top: 4px;
   font: 10px/1 var(--mono);
@@ -1252,6 +1254,7 @@ a { color: inherit; }
   .section__label { padding-bottom: 0; }
   .section__note { max-width: 46ch; }
   .log__item { grid-template-columns: 42px 104px minmax(0, 1fr) 108px; }
+  .log__item--no-thumb { grid-template-columns: 42px 104px minmax(0, 1fr); }
   .postcards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .wishlist { grid-template-columns: 1fr; gap: 16px; }
   .colophon__grid { grid-template-columns: repeat(2, auto); justify-content: space-between; }

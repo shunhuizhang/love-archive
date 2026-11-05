@@ -71,6 +71,7 @@
         title: "一起睡觉",
         note: "半夜你把被子全卷走，我又一点点抢回来。",
         place: "卧室",
+        photo: "assets/timeline/sleep-censored.jpg",
       },
       {
         date: "2026-08-03",
@@ -91,6 +92,7 @@
         title: "一起做饭",
         note: "厨房像案发现场，最后两个人吃得干干净净。",
         place: "厨房",
+        noThumb: true,
       },
       {
         date: "2026-08-05",
