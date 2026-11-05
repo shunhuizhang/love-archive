@@ -41,12 +41,14 @@
         title: "一起打游戏",
         note: "你输了就耍赖，我假装没看见。",
         place: "客厅",
+        photo: "assets/timeline/01-game.jpg",
       },
       {
         date: "2026-05-04",
         title: "一起拍照",
         note: "十张里九张糊了，剩下一张你笑得最好看。",
         place: "路上",
+        photo: "assets/timeline/02-photo.jpg",
       },
       {
         date: "2026-05-10",
@@ -54,6 +56,7 @@
         note: "从地铁口到你家楼下，一直没放开。",
         place: "街上",
         first: true,
+        photo: "assets/timeline/03-hold.jpg",
       },
       {
         date: "2026-05-26",
@@ -61,6 +64,7 @@
         note: "说好只是拍张合照的。",
         place: "家里",
         first: true,
+        photo: "assets/timeline/04-kiss.jpg",
       },
       {
         date: "2026-08-03",
@@ -73,12 +77,14 @@
         title: "一起散步",
         note: "没有目的地，绕了一大圈又回到原地。",
         place: "江边",
+        photo: "assets/timeline/05-walk.jpg",
       },
       {
         date: "2026-08-04",
         title: "一起吃汉堡咖喱饭",
         note: "你负责汉堡，我负责咖喱，谁也没让谁。",
         place: "快餐店",
+        photo: "assets/timeline/06-meal.jpg",
       },
       {
         date: "2026-08-04",
@@ -92,24 +98,28 @@
         note: "一颗一颗按下去，最后拼出了两个小人。",
         place: "家里",
         first: true,
+        photo: "assets/timeline/07-beads.jpg",
       },
       {
         date: "2026-08-06",
         title: "一起去游乐园",
         note: "飞椅升到最高处，风把尖叫吹成了笑。",
         place: "游乐园",
+        photo: "assets/timeline/08-park.jpg",
       },
       {
         date: "2026-08-06",
         title: "一起去景区看猴子",
         note: "猴子抢走了你的帽子，我们笑了半天。",
         place: "景区",
+        photo: "assets/timeline/09-scenic.jpg",
       },
       {
         date: "2026-11-01",
         title: "一起买文创",
         note: "逛了很久，最后只买了两张贴纸和一张明信片。",
         place: "文创店",
+        photo: "assets/timeline/10-merch.jpg",
       },
     ],
     places: [
