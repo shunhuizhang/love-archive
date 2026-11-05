@@ -149,8 +149,8 @@
               '<span class="log__place">' + esc(item.place) + "</span>" +
             "</div>" +
             '<figure class="log__thumb">' +
-              '<div class="media">' +
-                '<img src="' + esc(item.photo) + '" alt="' + esc(alt) + '" loading="lazy">' +
+              '<div class="media' + (item.photo ? "" : " is-missing") + '">' +
+                (item.photo ? '<img src="' + esc(item.photo) + '" alt="' + esc(alt) + '" loading="lazy">' : "") +
                 '<div class="media__dots" aria-hidden="true"></div>' +
                 '<div class="media__missing" aria-hidden="true"><span>FRAME ' + pad(i + 1) + "</span></div>" +
               "</div>" +

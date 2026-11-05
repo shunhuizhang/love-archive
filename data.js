@@ -37,158 +37,80 @@
 
     timeline: [
       {
-        date: "2026-04-25",
-        title: "第一次见面",
-        note: "二号线最后一节车厢。你把最后一个座位让给了我，自己站了两站，然后说：“反正我下一站就下。”",
-        place: "杭州 · 地铁二号线",
+        date: "2026-05-03",
+        title: "一起去拼豆",
+        note: "一颗一颗按下去，最后拼出了两个小人。",
+        place: "家里",
+      },
+      {
+        date: "2026-05-17",
+        title: "一起吃汉堡咖喱饭",
+        note: "你负责汉堡，我负责咖喱，谁也没让谁。",
+        place: "快餐店",
+      },
+      {
+        date: "2026-05-31",
+        title: "一起去游乐园",
+        note: "飞椅升到最高处，风把尖叫吹成了笑。",
+        place: "游乐园",
+      },
+      {
+        date: "2026-06-14",
+        title: "一起去景区看猴子",
+        note: "猴子抢走了你的帽子，我们笑了半天。",
+        place: "景区",
+      },
+      {
+        date: "2026-06-28",
+        title: "一起做饭",
+        note: "厨房像案发现场，最后两个人吃得干干净净。",
+        place: "厨房",
+      },
+      {
+        date: "2026-07-12",
+        title: "一起打游戏",
+        note: "你输了就耍赖，我假装没看见。",
+        place: "客厅",
+      },
+      {
+        date: "2026-07-26",
+        title: "一起亲亲",
+        note: "说好只是拍张合照的。",
+        place: "家里",
         first: true,
-        photo: P(
-          "empty subway carriage at night with neon reflections on the window, Hangzhou, cinematic 35mm film, muted colors",
-          "landscape_4_3"
-        ),
       },
       {
-        date: "2026-05-06",
-        title: "第一次一起看电影",
-        note: "看的是个烂片。散场后我们在便利店门口骂了四十分钟，比电影好看。",
-        place: "杭州 · 湖滨",
-        photo: P(
-          "evening street outside a cinema with neon signs and convenience store glow, film photography, warm and cool contrast",
-          "landscape_4_3"
-        ),
+        date: "2026-08-09",
+        title: "一起睡觉",
+        note: "半夜你把被子全卷走，我又一点点抢回来。",
+        place: "卧室",
       },
       {
-        date: "2026-05-20",
-        title: "第一次牵手",
-        note: "西湖边人很多。你把手伸过来的时候，我假装在看湖。",
-        place: "杭州 · 断桥",
-        photo: P(
-          "West Lake in Hangzhou at dusk, calm water, distant bridge and willow trees, soft mist, 35mm film",
-          "landscape_4_3"
-        ),
+        date: "2026-08-23",
+        title: "一起牵手",
+        note: "从地铁口到你家楼下，一直没放开。",
+        place: "街上",
+        first: true,
       },
       {
-        date: "2026-06-01",
-        title: "第一个纪念日",
-        note: "蛋糕被切成了兔子形状。刀工很差，但我们吃完了。",
-        place: "杭州 · 家",
-        photo: P(
-          "cake slices cut into rabbit shapes on a plate, warm fairy lights in the background, cozy home, film photo",
-          "square_hd"
-        ),
+        date: "2026-09-06",
+        title: "一起散步",
+        note: "没有目的地，绕了一大圈又回到原地。",
+        place: "江边",
       },
       {
-        date: "2026-06-19",
-        title: "第一次看海",
-        note: "厦门下雨，海是灰色的。你说灰色也算海。",
-        place: "厦门 · 黄厝海滩",
-        photo: P(
-          "grey overcast sea at Xiamen beach, wet sand, muted blue tones, 35mm film grain, moody",
-          "landscape_4_3"
-        ),
-      },
-      {
-        date: "2026-07-04",
-        title: "湘湖边拍了张很丑的合照",
-        note: "风太大，头发挡住了半张脸，但谁也没舍得删。",
-        place: "杭州 · 湘湖",
-        photo: P(
-          "lakeside path in summer with green trees and wind, soft afternoon light, 35mm film photography",
-          "portrait_4_3"
-        ),
-      },
-      {
-        date: "2026-07-18",
-        title: "第一次一起做饭",
-        note: "厨房像案发现场，番茄炒蛋最后变成了番茄汤。",
-        place: "杭州 · 家",
-        photo: P(
-          "messy home kitchen after cooking, tomatoes and eggs on the counter, warm evening light, film photo",
-          "landscape_4_3"
-        ),
-      },
-      {
-        date: "2026-08-01",
-        title: "在外滩看夜景",
-        note: "人挤人。灯光亮起来的时候我们只顾着笑，忘了拍照。",
-        place: "上海 · 外滩",
-        photo: P(
-          "night crowd at the Bund in Shanghai, warm city lights, film photography",
-          "landscape_4_3"
-        ),
-      },
-      {
-        date: "2026-08-10",
-        title: "领养了一只猫",
-        note: "它在纸箱里打了个哈欠，我们就走不动了。取名：年糕。",
-        place: "杭州 · 家",
-        photo: P(
-          "fluffy orange cat sleeping on a windowsill, warm afternoon sunlight, film photography",
-          "square_hd"
-        ),
-      },
-      {
-        date: "2026-08-22",
-        title: "环洱海骑了两天",
-        note: "第二天屁股疼得说不出话，但你说还想再来一次。",
-        place: "大理 · 洱海",
-        photo: P(
-          "two bicycles leaning by Erhai lake in Dali, mountains in the background, golden hour, film photography",
-          "landscape_4_3"
-        ),
-      },
-      {
-        date: "2026-09-05",
-        title: "第一次看雪山",
-        note: "零下十度。你把围巾分给我一半，自己冻得直跺脚。",
-        place: "川西 · 四姑娘山",
-        photo: P(
-          "blue hour snowy mountain ridge in western Sichuan, deep blue shadows, tiny figures in the distance, cinematic film",
-          "landscape_4_3"
-        ),
-      },
-      {
-        date: "2026-09-19",
-        title: "露营看星星",
-        note: "帐篷搭歪了，星星没歪。你说以后每年都来。",
-        place: "莫干山",
-        photo: P(
-          "campfire and tent under a starry night sky in the mountains, warm glow, long exposure, film grain",
-          "landscape_4_3"
-        ),
-      },
-      {
-        date: "2026-10-03",
-        title: "第一个秋天",
-        note: "桂花落了一地，我们踩着走回家。",
-        place: "杭州 · 满觉陇",
-        photo: P(
-          "osmanthus flowers along a Hangzhou street in autumn, warm afternoon light, film photography",
-          "landscape_4_3"
-        ),
-      },
-      {
-        date: "2026-10-18",
-        title: "去三亚等日出",
-        note: "四点半起床，云太厚，没看到太阳。你说那就等下一次。",
-        place: "三亚 · 后海",
-        photo: P(
-          "sunrise over the sea in Sanya, thick clouds, two silhouettes sitting on the sand, pastel sky, film photo",
-          "landscape_4_3"
-        ),
+        date: "2026-10-04",
+        title: "一起拍照",
+        note: "十张里九张糊了，剩下一张你笑得最好看。",
+        place: "路上",
       },
       {
         date: "2026-11-01",
-        title: "搬进新家",
-        note: "纸箱堆到天花板。第一件事是把合照挂在墙上。",
-        place: "杭州 · 新家",
-        photo: P(
-          "cardboard moving boxes stacked in a new apartment, a framed couple photo on top, warm daylight, film photography",
-          "portrait_4_3"
-        ),
+        title: "一起买文创",
+        note: "逛了很久，最后只买了两张贴纸和一张明信片。",
+        place: "文创店",
       },
     ],
-
     places: [
       {
         city: "云南文山丘北欢乐世界",
