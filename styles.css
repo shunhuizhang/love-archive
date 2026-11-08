@@ -600,6 +600,46 @@ a { color: inherit; }
   margin-bottom: 26px;
 }
 
+.log-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.log-tools .filters { margin-bottom: 0; }
+
+.page-size {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex: 0 0 auto;
+  font: 10px/1 var(--mono);
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.page-size select {
+  padding: 8px 10px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 10px/1 var(--mono);
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.page-size select:hover,
+.page-size select:focus-visible {
+  background: var(--pink);
+  color: var(--ink);
+}
+
 .filter {
   padding: 8px 13px;
   border: 1px solid var(--ink);
@@ -776,6 +816,63 @@ a { color: inherit; }
   margin: 26px 0 0;
   font: 11px/1.6 var(--mono);
   color: var(--muted);
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 38px;
+}
+
+.pager[hidden] { display: none; }
+
+.pager__btn {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: 10px/1 var(--mono);
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.pager__btn:hover:not(:disabled) {
+  background: var(--pink);
+  border-color: var(--pink);
+}
+
+.pager__btn.is-on {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+}
+
+.pager__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.pager__gap {
+  padding: 0 2px;
+  font: 10px/1 var(--mono);
+  color: var(--muted);
+}
+
+.pager__arrow { margin-inline: 5px; }
+
+.pager__meta {
+  margin-left: 8px;
+  font: 10px/1 var(--mono);
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 /* ================= 地方明信片 ================= */
@@ -1286,6 +1383,25 @@ a { color: inherit; }
   .postcard { padding: 7px 7px 11px; }
   .postcard__city { font-size: 21px; }
   .postcard__stamp { width: 36px; height: 44px; top: 16px; right: 16px; }
+  .log-tools { gap: 10px; margin-bottom: 18px; }
+  .page-size { font-size: 9px; gap: 7px; }
+  .page-size select { padding: 7px 8px; font-size: 9px; }
+  .pager {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 5px;
+    margin-top: 26px;
+    padding-bottom: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .pager::-webkit-scrollbar { display: none; }
+  .pager__btn { flex: 0 0 auto; min-width: 34px; height: 34px; padding: 0 9px; font-size: 9px; }
+  .pager__gap { flex: 0 0 auto; }
+  .pager__word { display: none; }
+  .pager__arrow { margin-inline: 0; }
+  .pager__meta { display: none; }
   .colophon__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; }
   .lightbox__stage img { max-height: 58vh; }
   .lightbox__cap { grid-template-columns: 1fr; }

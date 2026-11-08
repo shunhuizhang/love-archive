@@ -125,9 +125,21 @@
         <p class="section__note">从第一次见面开始，按时间排列。有些事很小，小到不记下来就会忘。</p>
       </header>
 
-      <div class="filters" id="yearFilters" role="group" aria-label="按年份筛选共同事件"></div>
+      <div class="log-tools">
+        <div class="filters" id="yearFilters" role="group" aria-label="按年份筛选共同事件"></div>
+        <label class="page-size" for="logPageSize">
+          <span>每页</span>
+          <select id="logPageSize">
+            <option value="5" selected>5 条</option>
+            <option value="10">10 条</option>
+            <option value="20">20 条</option>
+            <option value="0">全部</option>
+          </select>
+        </label>
+      </div>
       <ol class="log" id="log"></ol>
       <p class="log__empty" id="logEmpty" hidden>这一年还没有存档。</p>
+      <nav class="pager" id="logPager" aria-label="共同事件分页" hidden></nav>
     </div>
   </section>
 
