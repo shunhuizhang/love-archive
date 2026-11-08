@@ -170,7 +170,7 @@
         title: "一起玩电玩",
         note: "币用完了还站在别人后面看，看得比玩得认真。",
         place: "电玩城",
-        missingText: "忘拍了 · 后续补上",
+        photo: "assets/timeline/19-arcade.jpg",
       },
       {
         date: "2026-11-07",
