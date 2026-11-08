@@ -295,6 +295,12 @@
         note: "江风很大，你站在栏杆边看了很久。",
         photo: "assets/place-05.jpg",
       },
+      {
+        city: "长沙恰同学少年广场",
+        date: "2026.11",
+        note: "雕像的灯亮到很晚，你举着小国旗站在我旁边。",
+        photo: "assets/place-06.jpg",
+      },
     ],
 
     wishlist: [
