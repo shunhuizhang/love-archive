@@ -186,6 +186,48 @@
         place: "美术馆",
         photo: "assets/timeline/18-vangogh.jpg",
       },
+      {
+        date: "2026-11-08",
+        title: "一起打保龄球",
+        note: "第一颗球滚进沟里，最后一颗居然全倒了。",
+        place: "保龄球馆",
+        photo: "assets/timeline/20-bowling.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起吹泡泡",
+        note: "泡泡飘到灯下面，每一个都变成彩色的。",
+        place: "商场中庭",
+        photo: "assets/timeline/21-bubbles.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起吹塑胶泡泡",
+        note: "越吹越大，最后还是破在手上。",
+        place: "手工摊",
+        photo: "assets/timeline/22-gluebubble.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起时来运转",
+        note: "一人抽一张，你那张写着好运，我这张写着再抽一次。",
+        place: "祈福摊",
+        photo: "assets/timeline/23-luck.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起射击",
+        note: "你专打气球，我专打剩下的那个。",
+        place: "电玩城",
+        photo: "assets/timeline/24-shooting.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起钓鱼",
+        note: "钓了半天，桶里只有两条，还都很小。",
+        place: "钓鱼摊",
+        photo: "assets/timeline/25-fishing.jpg",
+      },
     ],
     places: [
       {
