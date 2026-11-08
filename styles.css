@@ -1635,6 +1635,14 @@ a { color: inherit; }
   color: var(--paper-3);
 }
 
+/* 静音播放中：虚框 + 粉色描边，提示「点一下开声」 */
+.music-btn.is-muted {
+  background: transparent;
+  border-color: var(--pink);
+  border-style: dashed;
+  color: var(--pink);
+}
+
 .music-btn__bars {
   display: inline-flex;
   align-items: flex-end;
