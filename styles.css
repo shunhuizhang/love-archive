@@ -1559,8 +1559,8 @@ a { color: inherit; }
   position: relative;
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   border: 1px solid var(--ink);
   background: transparent;
@@ -2023,7 +2023,7 @@ a { color: inherit; }
 @media (max-width: 720px) {
   .music-btn { padding: 8px 9px; }
   .music-btn__label { display: none; }
-  .theme-toggle { width: 32px; height: 32px; }
+  .theme-toggle { width: 28px; height: 28px; }
   .theme-toggle svg { width: 15px; height: 15px; }
   .auth-btn { padding: 8px 9px; font-size: 9px; }
   .user-chip { padding: 7px 8px; }
