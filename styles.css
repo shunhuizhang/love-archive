@@ -147,9 +147,30 @@ a { color: inherit; }
 }
 
 .brand strong {
+  display: inline-flex;
+  align-items: baseline;
   font-size: 17px;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.06em;
+}
+
+.brand__amp {
+  display: inline-block;
+  margin: 0 1px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1;
+  color: var(--pink);
+  transform: translateY(0.5px) rotate(-7deg);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.brand:hover .brand__amp,
+.brand:focus-visible .brand__amp {
+  color: var(--blue);
+  transform: translateY(-1px) rotate(7deg) scale(1.12);
 }
 
 .brand span {
