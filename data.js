@@ -228,6 +228,41 @@
         place: "钓鱼摊",
         photo: "assets/timeline/25-fishing.jpg",
       },
+      {
+        date: "2026-11-08",
+        title: "一起看电影",
+        note: "屏幕太小，两个人挤在一起才看得清。",
+        place: "家里",
+        photo: "assets/timeline/26-movie.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起吃水果拼盘",
+        note: "青提都被挑走了，剩下几块哈密瓜留给我。",
+        place: "水果店",
+        photo: "assets/timeline/27-fruit.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起抓娃娃",
+        note: "抓了十几次，最后拎回一袋不知道是什么的东西。",
+        place: "娃娃机前",
+        photo: "assets/timeline/28-claw.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起打台球",
+        note: "你架杆的姿势很稳，我一杆把白球打进了袋。",
+        place: "台球厅",
+        photo: "assets/timeline/29-billiards.jpg",
+      },
+      {
+        date: "2026-11-08",
+        title: "一起打弹珠",
+        note: "小钢珠滚下去的声音，听得比中奖还开心。",
+        place: "电玩城",
+        photo: "assets/timeline/30-marbles.jpg",
+      },
     ],
     places: [
       {
