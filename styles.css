@@ -694,8 +694,6 @@ a { color: inherit; }
 
 .log__item:hover::before { width: 3px; }
 
-.log__item--no-thumb { grid-template-columns: 48px 116px minmax(0, 1fr); }
-
 .log__no {
   padding-top: 4px;
   font: 10px/1 var(--mono);
@@ -762,6 +760,12 @@ a { color: inherit; }
 }
 
 .log__thumb img { transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+.log__thumb .media__missing span {
+  padding: 5px 6px;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+}
 
 .log__item:hover .log__thumb img { transform: scale(1.06); }
 
@@ -1254,7 +1258,6 @@ a { color: inherit; }
   .section__label { padding-bottom: 0; }
   .section__note { max-width: 46ch; }
   .log__item { grid-template-columns: 42px 104px minmax(0, 1fr) 108px; }
-  .log__item--no-thumb { grid-template-columns: 42px 104px minmax(0, 1fr); }
   .postcards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .wishlist { grid-template-columns: 1fr; gap: 16px; }
   .colophon__grid { grid-template-columns: repeat(2, auto); justify-content: space-between; }

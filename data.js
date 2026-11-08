@@ -92,7 +92,7 @@
         title: "一起做饭",
         note: "厨房像案发现场，最后两个人吃得干干净净。",
         place: "厨房",
-        noThumb: true,
+        missingText: "忘拍了 · 后续补上",
       },
       {
         date: "2026-08-05",
